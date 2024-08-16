@@ -7,60 +7,82 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-## About Laravel
+# Pre-Doc
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+Pre-Doc هو موقع ويب مخصص لإدارة المواعيد مع الأطباء. يتيح هذا الموقع للمستخدمين حجز مواعيد مع الأطباء المعتمدين، بينما يمكن للأطباء إدارة مواعيدهم والرد على الحجوزات. يحتوي الموقع على ثلاث لوحات تحكم مخصصة للمستخدمين، الأطباء، والإداريين.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## المميزات
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+- **واجهة مستخدم متجاوبة**: تصميم الموقع متوافق مع جميع الشاشات والأجهزة.
+- **أنظمة متعددة للوحات التحكم**:
+  - **لوحة تحكم المستخدم العادي**: لإدارة المواعيد وحجزها.
+  - **لوحة تحكم الطبيب**: لمراجعة وإدارة الحجوزات والموافقة عليها أو رفضها.
+  - **لوحة تحكم المشرف**: لإضافة مستخدمين، عرض جميع المستخدمين، إضافة أطباء، عرض جميع الأطباء، إضافة مشرفين، عرض جميع المشرفين، والاطلاع على أحدث الحجوزات.
 
-## Learning Laravel
+## التقنيات المستخدمة
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **الواجهة الأمامية**:
+  - HTML
+  - CSS
+  - Bootstrap
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+- **الواجهة الخلفية**:
+  - PHP
+  - Laravel
+  - MySQL
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## كيفية التثبيت
 
-## Laravel Sponsors
+1. **استنساخ المستودع**:
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+    ```bash
+    git clone https://github.com/username/repository-name.git
+    cd repository-name
+    ```
 
-### Premium Partners
+2. **تثبيت التبعيات**:
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[WebReinvent](https://webreinvent.com/)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Jump24](https://jump24.co.uk)**
-- **[Redberry](https://redberry.international/laravel/)**
-- **[Active Logic](https://activelogic.com)**
-- **[byte5](https://byte5.de)**
-- **[OP.GG](https://op.gg)**
+    ```bash
+    composer install
+    npm install
+    ```
 
-## Contributing
+3. **إعداد البيئة**:
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+    نسخ ملف `.env.example` إلى `.env` وتحديث إعدادات قاعدة البيانات:
 
-## Code of Conduct
+    ```bash
+    cp .env.example .env
+    ```
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+    ثم تعديل ملف `.env` ليتناسب مع إعدادات قاعدة البيانات الخاصة بك.
 
-## Security Vulnerabilities
+4. **إنشاء قاعدة البيانات وتشغيل الهجرات**:
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+    ```bash
+    php artisan migrate
+    ```
 
-## License
+5. **تشغيل الخادم المحلي**:
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+    ```bash
+    php artisan serve
+    ```
+
+    بعد ذلك، يمكنك زيارة الموقع عبر المتصفح على العنوان الذي سيظهر لك في ال CMD.
+
+## كيفية الاستخدام
+
+- **تسجيل الدخول كمستخدم**: قم بتسجيل الدخول عبر واجهة المستخدم واستخدم لوحة التحكم لحجز المواعيد.
+- **تسجيل الدخول كطبيب**: قم بإدارة الحجوزات من خلال لوحة التحكم الخاصة بك.
+- **تسجيل الدخول كمسؤول**: يمكنك إدارة جميع جوانب الموقع من لوحة التحكم الخاصة بالمشرف.
+
+## الأمان
+
+تم تأمين الموقع ضد معظم الثغرات الأمنية الشائعة لضمان حماية بيانات المستخدمين والأطباء.
+
+
+## التواصل
+
+لأي استفسارات أو دعم، يمكنك التواصل عبر البريد الإلكتروني: medo.mohsen.saad@gmail.com
+
