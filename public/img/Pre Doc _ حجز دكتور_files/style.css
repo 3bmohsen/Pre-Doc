@@ -1,0 +1,28 @@
+.f1{
+    color:#ffffff; font-size:70px;
+}
+.card {
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid black;
+    margin: 50px;
+}
+.card-img-top{
+    border-radius: 50%;
+    width: 200px;
+}
+@media (min-width: 300px) and (max-width: 767px) { 
+    .f1 {
+        font-size: 40px !important;
+    }
+    .f2{
+        font-size: 19px !important;
+
+    }
+}
+
+@media (min-width: 768px) { 
+    .f1 {
+        font-size: 60px !important;
+    }
+}
