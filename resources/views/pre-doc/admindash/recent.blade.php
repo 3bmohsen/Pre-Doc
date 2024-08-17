@@ -7,6 +7,8 @@
 <hr>
     <div class="p-3  text-success text-center"><h5 class="cairo-bold">اجمالي عدد الحجوزات: {{$count}}</h5></div>
     <hr>
+    <div class="table-responsive" dir="rtl">
+
 <table class=" table text-center" style="direction: rtl;">
   <thead>
     <tr>
@@ -41,6 +43,7 @@
   </tbody>
 
 </table>
+</div>
 @if ($books->isEmpty())
     <div class="alert alert-danger text-center cairo-bold m-5">
                 ليس لديك اي حجوزات مسبقة
