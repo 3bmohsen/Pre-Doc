@@ -11,6 +11,7 @@
                 {{ session('success') }}
             </div>
         @endif
+        <div class="table-responsive" dir="rtl">
 <table class=" table text-center" style="direction: rtl;">
   <thead>
     <tr>
@@ -60,5 +61,6 @@
     
   </tbody>
 </table>
+</div>
 </div>
 @endsection
