@@ -4,7 +4,6 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\BookingController;
 
-use App\Models\Booking;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', [UserController::class,'getdocs']);
@@ -12,11 +11,11 @@ Route::get('/', [UserController::class,'getdocs']);
 Route::get('/dashboard', function (){ 
     $user = Auth::user();
     if ($user->role == 'user') {
-        return redirect('/user/dashboard')->middleware(['auth','Checkuser']);
+        return redirect('/user/dashboard');
     } elseif ($user->role == 'doc') {
-        return redirect('/doc/dashboard')->middleware(['auth','Checkdoc']);
+        return redirect('/doc/dashboard');
     }elseif ($user->role == 'admin') {
-        return redirect('/admin/dashboard')->middleware(['auth','Checkadmin']);
+        return redirect('/admin/dashboard');
     } else {
         return redirect('/'); // Fallback for other roles
     }
