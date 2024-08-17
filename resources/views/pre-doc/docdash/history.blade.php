@@ -4,7 +4,8 @@
 <div class="container">
 
     <h1 class="p-5 text-center cairo-bold">سجل الحجوزات</h1>
-    
+    <div class="table-responsive" dir="rtl">
+
 <table class=" table text-center" style="direction: rtl;">
   <thead>
     <tr>
@@ -37,6 +38,7 @@
   </tbody>
 
 </table>
+</div>
 @if ($books->isEmpty())
     <div class="alert alert-danger text-center cairo-bold m-5">
                 ليس لديك اي حجوزات مسبقة
